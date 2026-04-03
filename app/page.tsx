@@ -94,7 +94,7 @@ export default function EarthClickerGame() {
       id: "europe",
       name: "Europe",
       cost: 100,
-      pointsPerSecond: 10,
+      pointsPerSecond: 0.5,
       owned: 0,
       icon: <Trees className="h-5 w-5" />,
       description: "Smallest continent - rich history and culture",
@@ -326,18 +326,18 @@ export default function EarthClickerGame() {
         {/* Points Tracker - Top Left */}
         <Card className="fixed left-2 top-2 z-10 w-60 bg-card p-3 text-center">
           <div className="mb-3">
-            <p className="text-sm text-muted-foreground">Earth Points</p>
-            <p className="text-3xl font-bold text-primary md:text-4xl">{formatNumber(points)}</p>
+            <p className="text-sm text-white">Earth Points</p>
+            <p className="text-3xl font-bold text-white md:text-4xl">{formatNumber(points)}</p>
           </div>
           <div className="flex items-center justify-center gap-4 text-sm">
             <div>
-              <p className="text-muted-foreground">Per Click</p>
-              <p className="font-semibold text-foreground">{clickPower}</p>
+              <p className="text-white">Per Click</p>
+              <p className="font-semibold text-white">{clickPower}</p>
             </div>
             <div className="h-6 w-px bg-border" />
             <div>
-              <p className="text-muted-foreground">Per Second</p>
-              <p className="font-semibold text-secondary">{pointsPerSecond.toFixed(1)}</p>
+              <p className="text-white">Per Second</p>
+              <p className="font-semibold text-white">{pointsPerSecond.toFixed(1)}</p>
             </div>
           </div>
         </Card>
@@ -345,7 +345,7 @@ export default function EarthClickerGame() {
         {/* Header */}
         <header className="mb-6 text-center">
           <h1 
-            className="mb-2 text-3xl font-bold text-primary md:text-5xl cursor-pointer hover:scale-105 transition-transform"
+            className="mb-2 text-3xl font-bold text-white md:text-5xl cursor-pointer hover:scale-105 transition-transform"
             onClick={() => {
               setPoints(prev => prev + 1000000)
               console.log('🎉 Secret discovered! +1,000,000 points!')
@@ -354,7 +354,7 @@ export default function EarthClickerGame() {
           >
             🌍 Earth Clicker
           </h1>
-          <p className="text-base text-muted-foreground md:text-lg">Click the Earth to save the planet!</p>
+          <p className="text-base text-white md:text-lg">Click the Earth to save the planet!</p>
         </header>
 
         <div className="grid gap-4 lg:grid-cols-[1fr_400px]">
